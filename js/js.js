@@ -4,9 +4,9 @@ const fragment = document.createDocumentFragment()
 
 
 
-document.addEventListener('DOMContentLoaded', e => { 
-    
-    fetchData() 
+document.addEventListener('DOMContentLoaded', e => {
+
+    fetchData()
     const links = document.querySelectorAll(".sidebar-link");
     const popup = document.getElementById("popup");
     const popupBody = document.getElementById("popup-body");
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', e => {
                     <form id="login-form">
                         <input type="text" id="username" placeholder="Usuario" required>
                         <input type="password" id="password" placeholder="Contraseña" required>
-                        <button type="submit">Iniciar Sesión</button>
-                        <button type="submit">Registrarse</button>
+                        <button type="submit" id="login-button">Iniciar Sesión</button>
+                        <button type="button" id="register-button">Registrarse</button>
                     </form>
                 `;
                 const loginForm = document.getElementById("login-form");
