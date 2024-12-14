@@ -1,0 +1,73 @@
+[
+	{
+	  "nombre": "Carlos",
+	  "trabajo": "Pintor",
+	  "precio": "80",
+	  "valoracion": "4.96/5",
+	  "descripcion": "https://pinturashipopotamo.es/wp-content/uploads/2020/01/como-elegir-un-buen-pintor.jpg"
+	},
+	{
+	  "nombre": "María",
+	  "trabajo": "Plomera",
+	  "precio": "70",
+	  "valoracion": "4.85/5",
+	  "descripcion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKX0YUjvKACLtuSUWGoJESpCdtI8xuyZjzg&s"
+	},
+	{
+	  "nombre": "Juan",
+	  "trabajo": "Carpintero",
+	  "precio": "100",
+	  "valoracion": "4.92/5",
+	  "descripcion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOvt9l5pgkZe4utAPYPeu9wLz-KTyS2MbZPQ&s"
+	},
+	{
+	  "nombre": "Ana",
+	  "trabajo": "Decoradora",
+	  "precio": "120",
+	  "valoracion": "4.89/5",
+	  "descripcion": "https://postgradoingenieria.com/wp-content/uploads/decorador-interiores-xxss.jpg"
+	},
+	{
+	  "nombre": "Pedro",
+	  "trabajo": "Electricista",
+	  "precio": "90",
+	  "valoracion": "4.91/5",
+	  "descripcion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR41HwtxLK-48Ywq2BFWozbuA8fctmfbSGXnQ&s"
+	},
+	{
+	  "nombre": "Lucía",
+	  "trabajo": "Jardinera",
+	  "precio": "60",
+	  "valoracion": "4.87/5",
+	  "descripcion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShX6NuTBY44Csu-t1eoDF7-GckjvM7qKi40A&s"
+	},
+	{
+	  "nombre": "Roberto",
+	  "trabajo": "Fontanero",
+	  "precio": "85",
+	  "valoracion": "4.94/5",
+	  "descripcion": "https://propertyfix.com.mx/wp-content/uploads/2015/08/Dollarphotoclub_73838471-copy1.jpg"
+	},
+	{
+	  "nombre": "Sofía",
+	  "trabajo": "Diseñadora de interiores",
+	  "precio": "150",
+	  "valoracion": "4.88/5",
+	  "descripcion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgrB5z03jwfAnhOv8BVgsWaxQBQcTFOupgBQ&s"
+	},
+	{
+	  "nombre": "Luis",
+	  "trabajo": "Albañil",
+	  "precio": "110",
+	  "valoracion": "4.90/5",
+	  "descripcion": "https://d2sapt5dytmohl.cloudfront.net/images/upload/41185/card/653a9906881820.71194162.jpg"
+	},
+	{
+	  "nombre": "Elena",
+	  "trabajo": "Cerrajera",
+	  "precio": "75",
+	  "valoracion": "4.95/5",
+	  "descripcion": "https://masencarnacion.s3.us-west-2.amazonaws.com/uploads/public/638/09d/8d5/63809d8d594c3195931735.jpg"
+	}
+  ]
+  
