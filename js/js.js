@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', e => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
             const popupContent = link.getAttribute("data-popup");
-
+    
             if (popupContent === "login") {
                 popupBody.innerHTML = `
                     <h2>Login</h2>
@@ -28,14 +28,56 @@ document.addEventListener('DOMContentLoaded', e => {
                         <button type="button" id="register-button">Registrarse</button>
                     </form>
                 `;
+    
                 const loginForm = document.getElementById("login-form");
+                const registerButton = document.getElementById("register-button");
+    
+                // Manejo del formulario de login
                 loginForm.addEventListener("submit", handleLogin);
+    
+                // Redirigir al formulario de registro
+                registerButton.addEventListener("click", () => {
+                    popupBody.innerHTML = `
+                        <h2>Registro</h2>
+                        <form id="register-form">
+                            <input type="text" id="name" placeholder="Nombre" required>
+                            <input type="email" id="email" placeholder="Correo electrónico" required>
+                            <input type="password" id="password" placeholder="Contraseña" required>
+                            <button type="submit">Registrarse</button>
+                        </form>
+                    `;
+    
+                    // Manejo del formulario de registro
+                    const registerForm = document.getElementById("register-form");
+                    registerForm.addEventListener("submit", handleRegister);
+                });
             } else {
                 popupBody.textContent = `Has seleccionado: ${popupContent}`;
             }
+    
             popup.style.display = "flex";
         });
     });
+    
+    // Función para manejar el login
+    function handleLogin(event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        console.log("Iniciando sesión con:", username, password);
+        // Aquí va la lógica para validar el login
+    }
+    
+    // Función para manejar el registro
+    function handleRegister(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        console.log("Registrando usuario:", name, email, password);
+        // Aquí va la lógica para registrar al usuario
+    }
+    
 
     // Cerrar popup
     closeBtn.addEventListener("click", () => {
