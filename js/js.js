@@ -108,6 +108,54 @@ document.addEventListener('DOMContentLoaded', e => {
     console.log(e)
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const cardsContainer = document.getElementById("cards");
+    const popup = document.getElementById("popup");
+    const popupBody = document.getElementById("popup-body");
+    const closePopup = document.getElementById("closePopup");
+
+    // Función para abrir el popup con la información del trabajador
+    function openPopup(worker) {
+        popupBody.innerHTML = `
+            <h2>${worker.name}</h2>
+            <img src="${worker.image}" alt="${worker.name}" class="profile-image" style="width:100px; border-radius:10px;">
+            <p><strong>Ocupación:</strong> ${worker.occupation}</p>
+            <p><strong>Precio:</strong> $${worker.price}</p>
+            <p><strong>Valoración:</strong> ${worker.rating}/5</p>
+            <button onclick="alert('Ver perfil de ${worker.name}')">Ver Perfil</button>
+            <button onclick="alert('Contactar a ${worker.name}')">Contactar</button>
+        `;
+        popup.style.display = "flex";
+    }
+
+    // Evento para cerrar el popup
+    closePopup.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+
+    // Simulación de datos de trabajadores
+    const workers = [
+        { name: "Carlos", occupation: "Pintor", price: 80, rating: 4.96, image: "https://pinturashipopotamo.es/wp-content/uploads/2020/01/como-elegir-un-buen-pintor.jpg" },
+        { name: "María", occupation: "Plomera", price: 70, rating: 4.85, image: "https://example.com/plumber.jpg" }
+    ];
+
+    // Generar las cards dinámicamente
+    workers.forEach(worker => {
+        const template = document.getElementById("template-card").content.cloneNode(true);
+        template.querySelector(".nombre").textContent = worker.name;
+        template.querySelector(".trabajo").innerHTML = `Ocupación: <strong>${worker.occupation}</strong>`;
+        template.querySelector(".precio").innerHTML = `Precio: <strong>${worker.price}m²</strong>`;
+        template.querySelector(".valoracion").innerHTML = `Valoración: <strong>${worker.rating}/5</strong>`;
+        template.querySelector("img").src = worker.image;
+
+        // Evento para abrir el popup al hacer clic en la card
+        template.querySelector(".profile-card").addEventListener("click", () => openPopup(worker));
+
+        cardsContainer.appendChild(template);
+    });
+});
+
+
 // Traer productos
 const fetchData = async () => {
     const res = await fetch('../api.json');

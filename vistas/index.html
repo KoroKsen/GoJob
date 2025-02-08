@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Búsqueda de Trabajo</title>
-    <link rel="stylesheet" href="../Style/style.css"><head>
-    <link rel="stylesheet" href="../Style/prueba.css"><head></head>
-    <!-- Agregar Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="../Style/style.css">
+
+    <head>
+        <link rel="stylesheet" href="../Style/prueba.css">
+
+        <head></head>
+        <!-- Agregar Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
 
 </head>
 
@@ -23,7 +27,7 @@
             <a href="#" class="sidebar-link" data-popup="inicio"><i class="fas fa-home"></i> Inicio</a>
             <a href="#" class="sidebar-link" data-popup="login"><i class="fas fa-sign-in-alt"></i> Login/Register</a>
         </div>
-        
+
         <!-- Contenedor del Popup -->
         <div class="popup-overlay" id="popup">
             <div class="popup-content">
@@ -31,29 +35,41 @@
                 <div id="popup-body"></div>
             </div>
         </div>
+
+        <!-- Contenedor del Popup -->
+
         <div class="center-box">
             <div class="menu" id="cards">
                 <div class="heading"></div>
             </div>
-            <!-- Cuadro de información -->
-            <template id="template-card">
-                <div class="profile-card">
-                    <img src="https://pinturashipopotamo.es/wp-content/uploads/2020/01/como-elegir-un-buen-pintor.jpg"
-                        alt="Carlos - Pintor" class="profile-image">
-                    <div class="profile-details">
-                        <h2 class="nombre">Carlos</h2>
-                        <p1 class="trabajo">Ocupación: <strong>Pintor</strong></p1>
-                        <p2 class="precio">Precio: <strong>80m²</strong></p2>
-                        <p4 class="valoracion">Valoración: <strong>4.96/5</strong></p4>
-                        <p3 class=""><span class="phone-icon">📞</span> Contacto</p3>
-                    </div>
-                    <!-- Botones de acción -->
-                    <div class="action-buttons">
-                        <button class="edit-btn">Editar</button>
-                        <button class="delete-btn">Eliminar</button>
+
+            <div class="popup-overlay" id="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="closePopup">&times;</span>
+                    <div id="popup-body">
+                        <template id="template-card">
+                            <div class="profile-card">
+                                <img src="https://pinturashipopotamo.es/wp-content/uploads/2020/01/como-elegir-un-buen-pintor.jpg"
+                                    alt="Carlos - Pintor" class="profile-image">
+                                <div class="profile-details">
+                                    <h2 class="nombre">Carlos</h2>
+                                    <p1 class="trabajo">Ocupación: <strong>Pintor</strong></p1>
+                                    <p2 class="precio">Precio: <strong>80m²</strong></p2>
+                                    <p4 class="valoracion">Valoración: <strong>4.96/5</strong></p4>
+                                    <p3 class=""><span class="phone-icon">📞</span> Contacto</p3>
+                                </div>
+                                <!-- Botones de acción -->
+                                <div class="action-buttons">
+                                    <button class="edit-btn">Editar</button>
+                                    <button class="delete-btn">Eliminar</button>
+                                </div>
+                            </div>
+                        </template>
                     </div>
                 </div>
-            </template>
+            </div>
+            <!-- Cuadro de información -->
+
         </div>
     </div>
     <script src="../js/js.js"></script>
